@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NABHANI | نبهاني</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#fafafa;font-family:Arial,sans-serif;color:#222}
+header{background:white;padding:16px;border-bottom:1px solid #ddd;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:27px;font-weight:bold;color:#8b35b5}
+header span{font-size:23px}
+.stories{display:flex;gap:15px;overflow:auto;background:white;padding:15px;border-bottom:1px solid #ddd}
+.story{text-align:center;min-width:65px;font-size:12px}
+.circle{width:58px;height:58px;border-radius:50%;padding:3px;background:linear-gradient(45deg,#ff9a00,#e1306c,#833ab4);margin:auto auto 6px}
+.circle div{background:#eee;border:2px solid white;border-radius:50%;height:100%;display:grid;place-items:center;font-size:24px}
+.post{background:white;margin:15px 0;border-bottom:1px solid #ddd}
+.posthead{padding:12px;display:flex;align-items:center;gap:10px;font-weight:bold}
+.avatar{width:38px;height:38px;border-radius:50%;background:#eadcf5;display:grid;place-items:center}
+.photo{height:300px;background:linear-gradient(135deg,#eadcf5,#f8dce9);display:grid;place-items:center;font-size:75px}
+.actions{padding:12px;font-size:25px}
+.actions button{border:0;background:none;font-size:25px;cursor:pointer}
+.caption{padding:0 12px 15px}
+nav{position:fixed;bottom:0;left:0;right:0;background:white;border-top:1px solid #ddd;display:flex;justify-content:space-around;padding:13px}
+nav button{border:0;background:none;font-size:23px;cursor:pointer}
+main{padding-bottom:75px}
+</style>
+</head>
+<body>
+<header>
+<span>♡</span>
+<div class="logo">NABHANI</div>
+<span>✉</span>
+</header>
+
+<div class="stories">
+<div class="story"><div class="circle"><div>＋</div></div>قصتك</div>
+<div class="story"><div class="circle"><div>🌸</div></div>حنان</div>
+<div class="story"><div class="circle"><div>🌷</div></div>سارة</div>
+<div class="story"><div class="circle"><div>🌹</div></div>أحمد</div>
+<div class="story"><div class="circle"><div>✨</div></div>نور</div>
+</div>
+
+<main>
+<div class="post">
+<div class="posthead"><div class="avatar">🌸</div> NABHANI <span>•••</span></div>
+<div class="photo">🌸</div>
+<div class="actions">
+<button onclick="like(this)">♡</button>
+<button>💬</button>
+<button>↗</button>
+</div>
+<div class="caption"><b>أهلاً بكم في نبهاني!</b><br>منصتكم الجديدة للتواصل ومشاركة أجمل اللحظات ❤️</div>
+</div>
+</main>
+
+<nav>
+<button>⌂</button>
+<button>🔍</button>
+<button onclick="alert('قريباً: إضافة منشور')">＋</button>
+<button>♡</button>
+<button>👤</button>
+</nav>
+
+<script>
+function like(btn){
+btn.textContent=btn.textContent==='♡'?'♥':'♡';
+btn.style.color=btn.textContent==='♥'?'red':'black';
+}
+</script>
+</body>
+</html>
